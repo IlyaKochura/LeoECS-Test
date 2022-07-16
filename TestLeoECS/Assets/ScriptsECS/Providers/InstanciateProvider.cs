@@ -1,6 +1,7 @@
 ﻿using Voody.UniLeo;
+using ScriptsECS.Components;
 
 namespace ScriptsECS.Providers
 {
-    public class InstanciateParameterComponentProvider : MonoProvider<> {}
+    public class InstanciateProvider : MonoProvider<InstantiateComponent2> {}
 }
