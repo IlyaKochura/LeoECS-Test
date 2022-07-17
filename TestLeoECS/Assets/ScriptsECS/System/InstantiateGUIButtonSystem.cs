@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ScriptsECS.System
 {
-    sealed class InsantiateGUIButtonSystem : IEcsInitSystem
+    sealed class InstantiateGUIButtonSystem : IEcsInitSystem
     {
         private readonly EcsFilter<InstantiateGUISettingsComponent> _filter = null; 
         

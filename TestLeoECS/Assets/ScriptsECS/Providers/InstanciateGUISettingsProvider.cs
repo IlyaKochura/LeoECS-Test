@@ -3,5 +3,5 @@ using ScriptsECS.Components;
 
 namespace ScriptsECS.Providers
 {
-    public class InstanciateProvider : MonoProvider<InstantiateGUISettingsComponent> {}
+    public class InstanciateGUISettingsProvider : MonoProvider<InstantiateGUISettingsComponent> {}
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace ScriptsECS.Components
 {
     [Serializable]
-    public struct InstantiateComponent2
+    public struct InstantiateGUISettingsComponent
     {
         public Transform spawnPoint;
         public GameObject spawnPrefab;
