@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace ScriptsECS.System
 {
-    sealed class Insantiate : IEcsInitSystem
+    sealed class InsantiateGUIButtonSystem : IEcsInitSystem
     {
-        private readonly EcsFilter<InstantiateComponent2> _filter = null; 
+        private readonly EcsFilter<InstantiateGUISettingsComponent> _filter = null; 
         
         public void Init()
         {
