@@ -38,7 +38,7 @@ namespace LeoECS
             var sys = new ClickOnButtonGUISystem();
             _systems.Add(new InstantiateGUIButtonSystem()).
                 Add(sys).
-                Add(new DigSystem(sys));
+                Add(new DigAndRandomGoldSystem(sys));
         }
 
         private void AddOneFrames()

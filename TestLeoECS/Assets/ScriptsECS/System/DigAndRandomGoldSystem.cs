@@ -1,0 +1,79 @@
+﻿using System.Collections.Generic;
+using Leopotam.Ecs;
+using ScriptsECS.Components;
+using UnityEngine;
+using UnityEngine.UI;
+
+
+namespace ScriptsECS.System
+{
+    sealed class DigAndRandomGoldSystem : IEcsInitSystem, IEcsRunSystem
+    {
+        private readonly EcsFilter<DigComponent> _filter = null;
+        private readonly EcsFilter<InstantiateGUISettingsComponent> _filterButton = null;
+        private readonly EcsFilter<SearchButtonGUIComponent> _filterSearch = null;
+        private readonly EcsFilter<GUIViewComponent> _filterView = null;
+
+        private int _goldCollector;
+        private int _shovelCounter;
+
+        private ClickOnButtonGUISystem _sys;
+        public DigAndRandomGoldSystem(ClickOnButtonGUISystem click)
+        {
+            _sys = click;
+        }
+        
+        public void Init()
+        {
+            _shovelCounter = _filterButton.Get1(0).shovelCount;
+            _sys.Action += Digger;
+        }
+
+        public void Run()
+        {
+            ViewCounters();
+        }
+
+        private void Digger(int id)
+        {
+            if (_filterSearch.Get1(0).buttonsUI[id].itIsGold != true && _shovelCounter != 0) 
+            {
+                _filter.Get1(0).cellsDigCount[id] -= 1;
+                _shovelCounter--;
+            }
+            else
+            {
+                _filterSearch.Get1(0).buttonsUI[id].itIsGold = false;
+                _filterSearch.Get1(0).buttonsUI[id].SetText("");
+                _goldCollector++;
+            }
+
+            if (_filter.Get1(0).cellsDigCount[id] == 0)
+            {
+                _filterButton.Get1(0).buttons[id].GetComponent<Button>().interactable = false;
+                Debug.LogError("Докопал");
+            }
+            else
+            {
+                RandomGold(id);
+            }
+        }
+
+        private void RandomGold(int id)
+        {
+            var rnd = Random.Range(0, 6);
+
+            if (rnd >= 4)
+            {
+                _filterSearch.Get1(0).buttonsUI[id].itIsGold = true;
+                _filterSearch.Get1(0).buttonsUI[id].SetText("Голда");
+            }
+        }
+
+        private void ViewCounters()
+        {
+            _filterView.Get1(0).textGold.text = $"Gold {_goldCollector}";
+            _filterView.Get1(0).textShovel.text = $"Shovel {_shovelCounter}";
+        }
+    }
+}
