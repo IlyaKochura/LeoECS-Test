@@ -3,6 +3,7 @@ using Leopotam.Ecs;
 using ScriptsECS.Components;
 using UnityEngine;
 using UnityEngine.UI;
+using ScriptsMono;
 
 namespace ScriptsECS.System
 {
@@ -20,11 +21,12 @@ namespace ScriptsECS.System
                 ref var objectslist = ref component.buttons;
                 ref var buttonsList = ref search.buttonsUI;
 
-                buttonsList = new List<Button>(objectslist.Count);
+                buttonsList = new List<ButtonGUIDelegate>(objectslist.Count);
                 
                 for (int j = 0; j < objectslist.Count; j++)
                 {
-                    buttonsList.Add(objectslist[i].GetComponent<Button>());
+                    var id = j;
+                    buttonsList.Add(objectslist[i].GetComponent<ButtonGUIDelegate>());
                 }
 
             }
@@ -51,6 +53,7 @@ namespace ScriptsECS.System
                 for (int j = 0; j < length * width; j++)
                 {
                     var slot = Object.Instantiate(prefab, point);
+                    
                     objects.Add(slot);
                 }
             }

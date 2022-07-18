@@ -5,24 +5,24 @@ using UnityEngine;
 namespace ScriptsECS.System
 {
     sealed class ClickOnButtonGUISystem : IEcsInitSystem, IEcsRunSystem
-
     {
-    private readonly EcsFilter<SearchButtonGUIComponent> _filter = null;
+        private readonly EcsFilter<SearchButtonGUIComponent> _filter = null;
+        
 
         public void Init()
         {
-                foreach (var i in _filter)
+            foreach (var i in _filter)
+            {
+                ref var search = ref _filter.Get1(i);
+
+                ref var buttonsUI = ref search.buttonsUI;
+
+                for (int j = 0; j < buttonsUI.Count; j++)
                 {
-                    ref var search = ref _filter.Get1(i);
-
-                    ref var buttonsUI = ref search.buttonsUI;
-
-                    for (int j = 0; j < buttonsUI.Count; j++)
-                    {
-                        var id = j;
-                        buttonsUI[j].onClick.AddListener(() => SendMessageInConsole(id));
-                    }
+                    var id = j;
+                    buttonsUI[j].action = () => SendMessageInConsole(id);
                 }
+            }
         }
 
         public void Run()
@@ -34,5 +34,6 @@ namespace ScriptsECS.System
         {
             Debug.LogError($"Кнопка {i}");
         }
+        
     }
 }
