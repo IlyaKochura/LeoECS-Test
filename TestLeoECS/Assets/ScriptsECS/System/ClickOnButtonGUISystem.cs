@@ -1,4 +1,5 @@
-﻿using Leopotam.Ecs;
+﻿using System;
+using Leopotam.Ecs;
 using ScriptsECS.Components;
 using UnityEngine;
 
@@ -7,8 +8,8 @@ namespace ScriptsECS.System
     sealed class ClickOnButtonGUISystem : IEcsInitSystem, IEcsRunSystem
     {
         private readonly EcsFilter<SearchButtonGUIComponent> _filter = null;
-        
 
+        public Action<int> Action;
         public void Init()
         {
             foreach (var i in _filter)
@@ -20,7 +21,7 @@ namespace ScriptsECS.System
                 for (int j = 0; j < buttonsUI.Count; j++)
                 {
                     var id = j;
-                    buttonsUI[j].Action = () => SendMessageInConsole(id);
+                    buttonsUI[j].Action = () =>  Action.Invoke(id);
                 }
             }
         }
@@ -32,7 +33,7 @@ namespace ScriptsECS.System
 
         public void SendMessageInConsole(int i)
         {
-            Debug.LogError($"Кнопка {i}");
+            Debug.LogError(i);
         }
         
     }

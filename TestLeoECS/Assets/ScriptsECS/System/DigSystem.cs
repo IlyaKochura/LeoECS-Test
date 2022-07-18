@@ -1,5 +1,6 @@
 ﻿using Leopotam.Ecs;
 using ScriptsECS.Components;
+using UnityEngine;
 
 namespace ScriptsECS.System
 {
@@ -7,6 +8,7 @@ namespace ScriptsECS.System
     {
         private readonly EcsFilter<DigComponent, InstantiateGUISettingsComponent> _filter = null;
 
+        private ClickOnButtonGUISystem _click = new ClickOnButtonGUISystem();
         public void Init()
         {
             foreach (var i in _filter)
@@ -31,6 +33,11 @@ namespace ScriptsECS.System
         public void Run()
         {
             
+        }
+
+        private void Digger(int id)
+        {
+            Debug.LogError(id);
         }
     }
 }
