@@ -855,7 +855,7 @@ MonoBehaviour:
     sideLength: 3
     sideWidth: 3
     grid: {fileID: 336589236}
-    shovelCount: 20
+    shovelCount: 10
     buttons: []
 --- !u!114 &2086357862
 MonoBehaviour:
