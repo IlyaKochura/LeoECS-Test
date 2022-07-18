@@ -2,7 +2,6 @@
 using Leopotam.Ecs;
 using ScriptsECS.Components;
 using UnityEngine;
-using UnityEngine.UI;
 using ScriptsMono;
 
 namespace ScriptsECS.System

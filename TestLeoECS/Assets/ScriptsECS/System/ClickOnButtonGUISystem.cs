@@ -20,7 +20,7 @@ namespace ScriptsECS.System
                 for (int j = 0; j < buttonsUI.Count; j++)
                 {
                     var id = j;
-                    buttonsUI[j].action = () => SendMessageInConsole(id);
+                    buttonsUI[j].Action = () => SendMessageInConsole(id);
                 }
             }
         }
