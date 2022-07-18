@@ -5,11 +5,10 @@ using UnityEngine;
 
 namespace ScriptsECS.System
 {
-    sealed class ClickOnButtonGUISystem : IEcsInitSystem, IEcsRunSystem
+    sealed class ClickOnButtonGUISystem : IEcsInitSystem
     {
         private readonly EcsFilter<SearchButtonGUIComponent> _filter = null;
-
-        public Action<int> Action;
+        public event Action<int> Action;
         public void Init()
         {
             foreach (var i in _filter)
@@ -21,20 +20,9 @@ namespace ScriptsECS.System
                 for (int j = 0; j < buttonsUI.Count; j++)
                 {
                     var id = j;
-                    buttonsUI[j].Action = () =>  Action.Invoke(id);
+                    buttonsUI[j].Action = () =>  Action?.Invoke(id);;
                 }
             }
         }
-
-        public void Run()
-        {
-            
-        }
-
-        public void SendMessageInConsole(int i)
-        {
-            Debug.LogError(i);
-        }
-        
     }
 }
