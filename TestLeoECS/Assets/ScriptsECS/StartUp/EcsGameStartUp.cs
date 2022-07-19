@@ -3,7 +3,7 @@ using Leopotam.Ecs;
 using ScriptsECS.System;
 using Voody.UniLeo;
 
-namespace LeoECS
+namespace ScriptsECS.StartUp
 {
     public class EcsGameStartUp : MonoBehaviour
     {

@@ -1,7 +1,6 @@
 ﻿using System;
 using Leopotam.Ecs;
 using ScriptsECS.Components;
-using UnityEngine;
 
 namespace ScriptsECS.System
 {
@@ -9,7 +8,7 @@ namespace ScriptsECS.System
     {
         private readonly EcsFilter<SearchButtonGUIComponent> _filter = null;
         public event Action<int> Action;
-        public event Action restartAction;
+        public event Action RestartAction;
         public void Init()
         {
             foreach (var i in _filter)
@@ -25,7 +24,7 @@ namespace ScriptsECS.System
                 }
             }
 
-            _filter.Get1(0).button.Action = () => restartAction?.Invoke();
+            _filter.Get1(0).button.Action = () => RestartAction?.Invoke();
         }
     }
 }

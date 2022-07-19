@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Leopotam.Ecs;
+﻿using Leopotam.Ecs;
 using ScriptsECS.Components;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,7 +27,7 @@ namespace ScriptsECS.System
         {
             _shovelCounter = _filterButton.Get1(0).shovelCount;
             _sys.Action += Digger;
-            _sys.restartAction += RestartGame;
+            _sys.RestartAction += RestartGame;
         }
 
         public void Run()
@@ -46,7 +45,7 @@ namespace ScriptsECS.System
                 _shovelCounter--;
             }
             
-            if(_filterSearch.Get1(0).buttonsUI[id].itIsGold == true)
+            if(_filterSearch.Get1(0).buttonsUI[id].itIsGold)
             {
                 _filterSearch.Get1(0).buttonsUI[id].itIsGold = false;
                 _filterSearch.Get1(0).buttonsUI[id].SetText("");
