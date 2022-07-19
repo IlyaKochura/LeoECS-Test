@@ -65,7 +65,7 @@ namespace ScriptsECS.System
         {
             var rnd = Random.Range(0, 6);
 
-            if (rnd >= 4)
+            if (rnd >= 5)
             {
                 _filterSearch.Get1(0).buttonsUI[id].itIsGold = true;
                 _filterSearch.Get1(0).buttonsUI[id].SetText("Голда");
