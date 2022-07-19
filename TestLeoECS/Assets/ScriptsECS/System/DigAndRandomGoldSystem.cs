@@ -2,6 +2,7 @@
 using Leopotam.Ecs;
 using ScriptsECS.Components;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -27,6 +28,7 @@ namespace ScriptsECS.System
         {
             _shovelCounter = _filterButton.Get1(0).shovelCount;
             _sys.Action += Digger;
+            _sys.restartAction += RestartGame;
         }
 
         public void Run()
@@ -36,12 +38,15 @@ namespace ScriptsECS.System
 
         private void Digger(int id)
         {
-            if (_filterSearch.Get1(0).buttonsUI[id].itIsGold != true && _shovelCounter != 0) 
+            if(_shovelCounter <= 0) return;
+            
+            if (_filterSearch.Get1(0).buttonsUI[id].itIsGold != true && _shovelCounter > 0) 
             {
                 _filter.Get1(0).cellsDigCount[id] -= 1;
                 _shovelCounter--;
             }
-            else
+            
+            if(_filterSearch.Get1(0).buttonsUI[id].itIsGold == true)
             {
                 _filterSearch.Get1(0).buttonsUI[id].itIsGold = false;
                 _filterSearch.Get1(0).buttonsUI[id].SetText("");
@@ -51,7 +56,6 @@ namespace ScriptsECS.System
             if (_filter.Get1(0).cellsDigCount[id] == 0)
             {
                 _filterButton.Get1(0).buttons[id].GetComponent<Button>().interactable = false;
-                Debug.LogError("Докопал");
             }
             else
             {
@@ -74,6 +78,11 @@ namespace ScriptsECS.System
         {
             _filterView.Get1(0).textGold.text = $"Gold {_goldCollector}";
             _filterView.Get1(0).textShovel.text = $"Shovel {_shovelCounter}";
+        }
+
+        private void RestartGame()
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }

@@ -10,5 +10,6 @@ namespace ScriptsECS.Components
     public struct SearchButtonGUIComponent
     {
         [HideInInspector] public List<ButtonGUIDelegate> buttonsUI;
+        public ButtonGUIDelegate button;
     }
 }
