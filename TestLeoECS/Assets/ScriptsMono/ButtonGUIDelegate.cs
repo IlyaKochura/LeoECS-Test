@@ -9,10 +9,11 @@ namespace ScriptsMono
     {
         private Button _button;
         public Action Action { get; set; }
-        public bool itIsGold = false;
+        [HideInInspector] public bool itIsGold;
 
         void Start()
         {
+            itIsGold = false;
             _button = GetComponent<Button>();
             _button.onClick.AddListener(() => Action?.Invoke());
         }
