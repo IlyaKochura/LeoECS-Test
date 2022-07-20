@@ -1,5 +1,6 @@
 ﻿using System;
 using TMPro;
+using UnityEngine;
 
 namespace ScriptsECS.Components
 {
@@ -8,5 +9,6 @@ namespace ScriptsECS.Components
     {
         public TextMeshProUGUI textGold;
         public TextMeshProUGUI textShovel;
+        public GameObject winTitle;
     }
 }

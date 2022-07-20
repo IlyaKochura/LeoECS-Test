@@ -14,6 +14,8 @@ namespace ScriptsECS.Components
         public int sideWidth;
         public GridLayoutGroup grid;
         public int shovelCount;
+        public int goldToWin;
         [HideInInspector] public List<GameObject> buttons;
+        
     }
 }
