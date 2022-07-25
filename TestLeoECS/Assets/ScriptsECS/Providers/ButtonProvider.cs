@@ -3,8 +3,5 @@ using Voody.UniLeo;
 
 namespace ScriptsECS.Providers
 {
-    public class ButtonProvider : MonoProvider<ButtonComponent>
-    {
-        
-    }
+    public class ButtonProvider : MonoProvider<ButtonComponent>{}
 }

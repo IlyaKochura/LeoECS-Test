@@ -1,6 +1,7 @@
 ﻿using System;
 using Leopotam.Ecs;
 using ScriptsECS.Components;
+using ScriptsECS.Events;
 using UnityEngine;
 
 namespace ScriptsECS.System

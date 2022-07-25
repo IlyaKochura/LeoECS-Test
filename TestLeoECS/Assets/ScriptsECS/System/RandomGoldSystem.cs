@@ -1,44 +1,16 @@
-﻿using Leopotam.Ecs;
-using ScriptsECS.Components;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 namespace ScriptsECS.System
 {
-    sealed class DigAndRandomGoldSystem : IEcsInitSystem, IEcsRunSystem
+    sealed class RandomGoldSystem
     {
-        private readonly EcsFilter<DigComponent> _filter = null;
-        private readonly EcsFilter<InstantiateGUISettingsComponent> _filterButton = null;
-        private readonly EcsFilter<SearchButtonGUIComponent> _filterSearch = null;
-        private readonly EcsFilter<GUIViewComponent> _filterView = null;
-        private readonly EcsFilter<ButtonComponent, ClickEvent> _filterButtonS = null;
-
-        private int _goldCollector;
-        private int _shovelCounter;
-        private bool _game;
-
-        public void Init()
-        {
-            for (int i = 0; i < _filterButtonS.GetEntitiesCount(); i++)
-            {
-                var id = i;
-                ref var deb = ref _filterButtonS.Get1(i);
-            }
-            
-        }
-
-        public void Run()
-        {
-            
-            
-            // if (_goldCollector >= _filterButton.Get1(0).goldToWin)
+        // if (_goldCollector >= _filterButton.Get1(0).goldToWin)
             // {
             //     _game = false;
             //     _filterView.Get1(0).winTitle.SetActive(true);
             // }
             // ViewCounters();
-        }
+        
 
         // private void Digger(int id)
         // {

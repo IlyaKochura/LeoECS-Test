@@ -467,6 +467,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &832183725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832183728}
+  - component: {fileID: 832183727}
+  - component: {fileID: 832183726}
+  m_Layer: 0
+  m_Name: PresenterGUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &832183726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832183725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e88e8d17d1814267b1aa980ac6f03bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    textGold: {fileID: 0}
+    textShovel: {fileID: 0}
+    winTitle: {fileID: 0}
+--- !u!114 &832183727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832183725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863c7f7460b2b49abb4fa9a7ff9cb180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  convertMode: 0
+--- !u!4 &832183728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832183725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &859579192
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,6 +1045,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1755298125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1755298129}
+  - component: {fileID: 1755298128}
+  - component: {fileID: 1755298127}
+  - component: {fileID: 1755298126}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1755298126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755298125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bd432533bd43e8af9b327c23b8753b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    cellsDigCount: 
+    digCount: 0
+--- !u!114 &1755298127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755298125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fec1664c1bb402cbb1aa102cc960ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    shovelCount: 20
+    goldToWin: 3
+    goldCollector: 0
+    shovelCounter: 0
+    game: 1
+--- !u!114 &1755298128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755298125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863c7f7460b2b49abb4fa9a7ff9cb180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  convertMode: 0
+--- !u!4 &1755298129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755298125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942118938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,8 +1242,6 @@ GameObject:
   - component: {fileID: 2086357862}
   - component: {fileID: 2086357861}
   - component: {fileID: 2086357864}
-  - component: {fileID: 2086357865}
-  - component: {fileID: 2086357866}
   m_Layer: 0
   m_Name: InstanciateParam
   m_TagString: Untagged
@@ -1127,8 +1267,6 @@ MonoBehaviour:
     sideLength: 10
     sideWidth: 10
     grid: {fileID: 336589236}
-    shovelCount: 20
-    goldToWin: 3
     buttons: []
 --- !u!114 &2086357862
 MonoBehaviour:
@@ -1172,38 +1310,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     buttonsUI: []
-    button: {fileID: 2100761182}
---- !u!114 &2086357865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086357860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26bd432533bd43e8af9b327c23b8753b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value:
-    cellsDigCount: 
-    digCount: 3
---- !u!114 &2086357866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086357860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88e8d17d1814267b1aa980ac6f03bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value:
-    textGold: {fileID: 472872162}
-    textShovel: {fileID: 1468974008}
-    winTitle: {fileID: 1520823824}
 --- !u!1 &2100761180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71201e052a6f44a693d25893b1909cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itIsGold: 0
 --- !u!114 &2100761183
 MonoBehaviour:
   m_ObjectHideFlags: 0

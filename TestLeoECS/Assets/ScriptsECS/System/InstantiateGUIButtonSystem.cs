@@ -8,7 +8,7 @@ namespace ScriptsECS.System
 {
     sealed class InstantiateGUIButtonSystem : IEcsInitSystem
     {
-        private readonly EcsFilter<InstantiateGUISettingsComponent, SearchButtonGUIComponent, DigComponent> _filter = null; 
+        private readonly EcsFilter<InstantiateGUISettingsComponent, SearchButtonGUIComponent, GameManagerComponent> _filter = null; 
         
         public void Init()
         {
@@ -36,7 +36,7 @@ namespace ScriptsECS.System
                     var slot = Object.Instantiate(prefab, point);
                     objects.Add(slot);
                     buttonsList.Add(objects[j].GetComponent<ButtonGUIDelegate>());
-                    _filter.Get3(i).cellsDigCount.Add(_filter.Get3(i).digCount);
+                    // _filter.Get3(i).cellsDigCount.Add(_filter.Get3(i).digCount);
                 }
             }
         }
