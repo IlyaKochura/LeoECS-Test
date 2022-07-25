@@ -12,33 +12,34 @@ namespace ScriptsECS.System
         private readonly EcsFilter<InstantiateGUISettingsComponent> _filterButton = null;
         private readonly EcsFilter<SearchButtonGUIComponent> _filterSearch = null;
         private readonly EcsFilter<GUIViewComponent> _filterView = null;
+        private readonly EcsFilter<ButtonComponent, ClickEvent> _filterButtonS = null;
 
         private int _goldCollector;
         private int _shovelCounter;
         private bool _game;
 
-        private ClickOnButtonGUISystem _sys;
-        public DigAndRandomGoldSystem(ClickOnButtonGUISystem click)
-        {
-            _sys = click;
-        }
-        
         public void Init()
         {
+            for (int i = 0; i < _filterButtonS.GetEntitiesCount(); i++)
+            {
+                var id = i;
+                ref var deb = ref _filterButtonS.Get1(i);
+            }
+            
             _game = true;
             _shovelCounter = _filterButton.Get1(0).shovelCount;
-            _sys.Action += Digger;
-            _sys.RestartAction += RestartGame;
         }
 
         public void Run()
         {
-            if (_goldCollector >= _filterButton.Get1(0).goldToWin)
-            {
-                _game = false;
-                _filterView.Get1(0).winTitle.SetActive(true);
-            }
-            ViewCounters();
+            
+            
+            // if (_goldCollector >= _filterButton.Get1(0).goldToWin)
+            // {
+            //     _game = false;
+            //     _filterView.Get1(0).winTitle.SetActive(true);
+            // }
+            // ViewCounters();
         }
 
         private void Digger(int id)

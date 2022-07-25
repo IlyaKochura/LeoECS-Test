@@ -148,6 +148,8 @@ GameObject:
   - component: {fileID: 382762464613706337}
   - component: {fileID: 7552281593071366170}
   - component: {fileID: 1009636480713493696}
+  - component: {fileID: -3422935099896120428}
+  - component: {fileID: -6055997298573193462}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -271,3 +273,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itIsGold: 0
+--- !u!114 &-3422935099896120428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110512619507516595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863c7f7460b2b49abb4fa9a7ff9cb180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  convertMode: 0
+--- !u!114 &-6055997298573193462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110512619507516595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71403e7e63054136a75655da5e23bfe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

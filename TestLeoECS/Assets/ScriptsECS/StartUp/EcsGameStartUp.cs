@@ -1,5 +1,6 @@
 using UnityEngine;
 using Leopotam.Ecs;
+using ScriptsECS.Components;
 using ScriptsECS.System;
 using Voody.UniLeo;
 
@@ -26,6 +27,7 @@ namespace ScriptsECS.StartUp
         private void Update()
         {
             _systems.Run();
+
         }
 
         private void AddInjections()
@@ -35,15 +37,13 @@ namespace ScriptsECS.StartUp
         
         private void AddSystems()
         {
-            var sys = new ClickOnButtonGUISystem();
             _systems.Add(new InstantiateGUIButtonSystem()).
-                Add(sys).
-                Add(new DigAndRandomGoldSystem(sys));
+                Add(new ClickOnButtonGUISystem());
         }
 
         private void AddOneFrames()
         {
-            
+            _systems.OneFrame<ClickEvent>();
         }
 
         private void OnDestroy()
