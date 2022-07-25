@@ -158,10 +158,10 @@ RectTransform:
   m_Father: {fileID: 1942118939}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 551.5, y: 271}
-  m_SizeDelta: {x: 1103, y: 542}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336589236
 MonoBehaviour:
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 50, y: 50}
+  m_CellSize: {x: 100, y: 100}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 2
@@ -1124,8 +1124,8 @@ MonoBehaviour:
   value:
     spawnPoint: {fileID: 336589235}
     spawnPrefab: {fileID: 3110512619507516595, guid: e6c2ad1dd32628e44896609cb7e39aba, type: 3}
-    sideLength: 3
-    sideWidth: 3
+    sideLength: 10
+    sideWidth: 10
     grid: {fileID: 336589236}
     shovelCount: 20
     goldToWin: 3
