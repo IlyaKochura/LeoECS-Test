@@ -12,8 +12,7 @@ namespace ScriptsECS.System
         private readonly EcsFilter<InstantiateGUISettingsComponent, SearchButtonGUIComponent> _filter = null; 
         private readonly EcsFilter<GameManagerComponent> _filterManager = null;
         private readonly EcsFilter<ButtonComponent> _filterButton = null;
-        
-        
+
         public void Init()
         {
             foreach (var i in _filter)
@@ -42,8 +41,6 @@ namespace ScriptsECS.System
                     buttonsList.Add(objects[j].GetComponent<ButtonGUIDelegate>());
                 }
             }
-            
-            
         }
         
     }
