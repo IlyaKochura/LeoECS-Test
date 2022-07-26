@@ -39,7 +39,8 @@ namespace ScriptsECS.StartUp
         {
             _systems.Add(new InstantiateGUIButtonSystem()).
                 Add(new ClickOnButtonGUISystem()).
-                Add(new DigSystem());
+                Add(new DigSystem()).
+                Add(new GameRestartSystem()).Add(new CounterSystem()).Add(new ShowViewSystem());
         }
 
         private void AddOneFrames()

@@ -10,5 +10,6 @@ namespace ScriptsECS.Components
         public TextMeshProUGUI textGold;
         public TextMeshProUGUI textShovel;
         public GameObject winTitle;
+        public GameObject buttonRestart;
     }
 }

@@ -1,11 +1,14 @@
 ﻿using System;
+using UnityEngine;
 
 namespace ScriptsECS.Components
 {
     [Serializable]
-    public struct GameManagerComponent 
+    public struct GameManagerComponent
     {
-        public int shovelCount;
+        // [HideInInspector] public int currentShovelCount;
+        // [HideInInspector] public int cu
+        // public int shovels;
         public int goldToWin;
         public int goldCollector;
         public int shovelCounter;

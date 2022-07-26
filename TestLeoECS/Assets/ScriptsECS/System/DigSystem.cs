@@ -10,6 +10,7 @@ namespace ScriptsECS.System
     sealed class DigSystem : IEcsRunSystem
     {
         private readonly EcsFilter<ButtonComponent, ClickEvent> _filterButton = null;
+        
 
         public void Run()
         {
@@ -18,7 +19,6 @@ namespace ScriptsECS.System
                 _filterButton.Get1(i).cellDepth -= 1;
                 Debug.Log(_filterButton.Get1(i).cellDepth);
             }
-            
         }
     }
 }
