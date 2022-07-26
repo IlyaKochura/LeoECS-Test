@@ -10,5 +10,6 @@ namespace ScriptsECS.Components
         public int goldCollector;
         public int shovelCounter;
         public bool game;
+        public int cellDepth;
     }
 }

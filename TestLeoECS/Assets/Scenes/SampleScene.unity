@@ -498,9 +498,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value:
-    textGold: {fileID: 0}
-    textShovel: {fileID: 0}
-    winTitle: {fileID: 0}
+    textGold: {fileID: 472872162}
+    textShovel: {fileID: 1468974008}
+    winTitle: {fileID: 1520823824}
 --- !u!114 &832183727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1056,6 @@ GameObject:
   - component: {fileID: 1755298129}
   - component: {fileID: 1755298128}
   - component: {fileID: 1755298127}
-  - component: {fileID: 1755298126}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1064,21 +1063,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1755298126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755298125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26bd432533bd43e8af9b327c23b8753b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value:
-    cellsDigCount: 
-    digCount: 0
 --- !u!114 &1755298127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,9 +1078,10 @@ MonoBehaviour:
   value:
     shovelCount: 20
     goldToWin: 3
-    goldCollector: 0
-    shovelCounter: 0
+    goldCollector: 20
+    shovelCounter: 20
     game: 1
+    cellDepth: 10
 --- !u!114 &1755298128
 MonoBehaviour:
   m_ObjectHideFlags: 0

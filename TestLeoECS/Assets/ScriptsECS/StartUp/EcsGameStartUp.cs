@@ -38,7 +38,8 @@ namespace ScriptsECS.StartUp
         private void AddSystems()
         {
             _systems.Add(new InstantiateGUIButtonSystem()).
-                Add(new ClickOnButtonGUISystem());
+                Add(new ClickOnButtonGUISystem()).
+                Add(new DigSystem());
         }
 
         private void AddOneFrames()
