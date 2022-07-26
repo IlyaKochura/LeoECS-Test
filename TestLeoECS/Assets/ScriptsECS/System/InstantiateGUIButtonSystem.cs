@@ -9,10 +9,7 @@ namespace ScriptsECS.System
 {
     sealed class InstantiateGUIButtonSystem : IEcsInitSystem
     {
-        private readonly EcsFilter<InstantiateGUISettingsComponent, SearchButtonGUIComponent> _filter = null; 
-        private readonly EcsFilter<GameManagerComponent> _filterManager = null;
-        private readonly EcsFilter<ButtonComponent> _filterButton = null;
-
+        private readonly EcsFilter<InstantiateGUISettingsComponent, SearchButtonGUIComponent> _filter = null;
         public void Init()
         {
             foreach (var i in _filter)
