@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     goldToWin: 3
-    goldCollector: 20
+    goldCollector: 0
     shovelCounter: 20
     game: 1
     cellDepth: 10

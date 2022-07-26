@@ -14,6 +14,7 @@ namespace ScriptsECS.System
                 foreach (var i in _filterManager)
                 {
                     _filterView.Get1(g).textShovel.text = $"Shovel {_filterManager.Get1(i).shovelCounter}";
+                    _filterView.Get1(g).textGold.text = $"Gold {_filterManager.Get1(i).goldCollector}";
                 }
             }
         }

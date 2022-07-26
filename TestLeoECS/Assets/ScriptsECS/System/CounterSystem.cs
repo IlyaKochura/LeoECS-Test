@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Leopotam.Ecs;
 using ScriptsECS.Components;
-using UnityEngine.UIElements;
-using ClickEvent = ScriptsECS.Events.ClickEvent;
+using ScriptsECS.Events;
 
 namespace ScriptsECS.System
 {
@@ -18,7 +16,10 @@ namespace ScriptsECS.System
         {
             foreach (var i in _filterButton)
             {
-                _filterManager.Get1(0).shovelCounter--;
+                foreach (var g in _filterManager)
+                {
+                    _filterManager.Get1(g).shovelCounter--;
+                }
             }
         }
     }
