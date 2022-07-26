@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Leopotam.Ecs;
 using ScriptsECS.Components;
+using ScriptsECS.Providers;
 using UnityEngine;
 using ScriptsMono;
 
@@ -41,11 +42,9 @@ namespace ScriptsECS.System
                     buttonsList.Add(objects[j].GetComponent<ButtonGUIDelegate>());
                 }
             }
-
-            foreach (var i in _filterButton)
-            {
-                _filterButton.Get1(i).cellDepth = _filterManager.Get1(0).cellDepth;
-            }
+            
+            
         }
+        
     }
 }
