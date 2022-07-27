@@ -27,18 +27,16 @@ namespace ScriptsECS.StartUp
         private void Update()
         {
             _systems.Run();
-
         }
 
         private void AddInjections()
-        {
+        { 
             
         }
         
         private void AddSystems()
         {
             _systems.Add(new InstantiateGUIButtonSystem()).
-                Add(new ToAppointSystem()).
                 Add(new ClickOnButtonGUISystem()).
                 Add(new DigSystem()).
                 Add(new GameRestartSystem()).
