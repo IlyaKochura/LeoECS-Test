@@ -8,7 +8,7 @@ namespace ScriptsECS.Components
     [Serializable]
     public struct ButtonComponent
     {
-        [HideInInspector] public int cellDepth;
+        public int cellDepth;
         [HideInInspector] public bool itIsGold;
         [HideInInspector] public TextMeshProUGUI text;
     }

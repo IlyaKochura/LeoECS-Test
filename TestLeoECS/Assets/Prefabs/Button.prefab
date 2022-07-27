@@ -272,7 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71201e052a6f44a693d25893b1909cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itIsGold: 0
 --- !u!114 &-3422935099896120428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,3 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71403e7e63054136a75655da5e23bfe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value:
+    cellDepth: 5
+    itIsGold: 0
+    text: {fileID: 0}

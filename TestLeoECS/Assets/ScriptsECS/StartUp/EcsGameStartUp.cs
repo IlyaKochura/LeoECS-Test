@@ -41,7 +41,7 @@ namespace ScriptsECS.StartUp
                      Add(new DigSystem()).
                      Add(new GameRestartSystem()).
                      Add(new CounterSystem()).
-                     Add(new ShowViewSystem());
+                     Add(new ShowViewSystem()).Add(new EmptyCellsSystem()).Add(new ButtonOffSystem());
         }
 
         private void AddOneFrames()
