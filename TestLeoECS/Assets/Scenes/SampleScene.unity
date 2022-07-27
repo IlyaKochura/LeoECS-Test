@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 832183727}
   - component: {fileID: 832183726}
   m_Layer: 0
-  m_Name: PresenterGUI
+  m_Name: View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
