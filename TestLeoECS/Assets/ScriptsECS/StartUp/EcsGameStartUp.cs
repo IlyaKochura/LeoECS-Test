@@ -8,7 +8,6 @@ namespace ScriptsECS.StartUp
 {
     public class EcsGameStartUp : MonoBehaviour
     {
-
         private EcsWorld _world;
         private EcsSystems _systems;
 
@@ -41,7 +40,9 @@ namespace ScriptsECS.StartUp
                      Add(new DigSystem()).
                      Add(new GameRestartSystem()).
                      Add(new CounterSystem()).
-                     Add(new ShowViewSystem()).Add(new EmptyCellsSystem()).Add(new ButtonOffSystem());
+                     Add(new ShowViewSystem()).
+                     Add(new EmptyCellsSystem()).
+                     Add(new ButtonOffSystem());
         }
 
         private void AddOneFrames()
@@ -60,5 +61,4 @@ namespace ScriptsECS.StartUp
             
         }
     }
-    
 }

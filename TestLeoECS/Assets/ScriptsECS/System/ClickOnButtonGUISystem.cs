@@ -1,8 +1,6 @@
-﻿using System;
-using Leopotam.Ecs;
+﻿using Leopotam.Ecs;
 using ScriptsECS.Components;
 using ScriptsECS.Events;
-using UnityEngine;
 
 namespace ScriptsECS.System
 {
@@ -22,6 +20,7 @@ namespace ScriptsECS.System
                 {
                     var id = j;
                     buttonsUI[j].Action = () => SendEvent(id);
+                    buttonsUI[j].Action = () => _filterButton.Get1(i).id(id);
                 }
             }
             
