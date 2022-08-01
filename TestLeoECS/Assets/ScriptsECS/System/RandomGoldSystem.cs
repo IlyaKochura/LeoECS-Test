@@ -20,10 +20,11 @@ namespace ScriptsECS.System
                 foreach (var i in _filterClick)
                 {
                     var gold = rnd.Next(0, 10);
+                    
                     if (gold > _filterManager.Get1(j).chanceGold)
                     {
-                        _filterClick.Get1(i).itIsGold = true;
                         _filterClick.GetEntity(i).Get<GoldEvent>();
+                        _filterClick.Get1(i).itIsGold = true;
                     }
                 }
             }

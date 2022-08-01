@@ -1,4 +1,5 @@
 ﻿using Leopotam.Ecs;
+using ScriptsECS.Events;
 using ScriptsECS.Components;
 
 namespace ScriptsECS.System

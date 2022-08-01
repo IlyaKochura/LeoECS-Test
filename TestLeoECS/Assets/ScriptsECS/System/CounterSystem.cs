@@ -7,10 +7,9 @@ namespace ScriptsECS.System
 {
     sealed class CounterSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<ButtonComponent, ClickEvent> _filterButton = null;
+        private readonly EcsFilter<ButtonComponent, DigEvent> _filterButton = null;
+        private readonly EcsFilter<ButtonComponent, ClearEvent, ClickEvent> _filterGold = null;
         private readonly EcsFilter<GameManagerComponent> _filterManager = null;
-
-        private Action _action;
         
         public void Run()
         {
@@ -19,6 +18,15 @@ namespace ScriptsECS.System
                 foreach (var g in _filterManager)
                 {
                     _filterManager.Get1(g).shovelCounter--;
+                }
+            }
+
+            foreach (var i in _filterGold)
+            {
+                foreach (var g in _filterManager)
+                {
+                    _filterGold.GetEntity(g).Del<CollectGoldEvent>();
+                    _filterManager.Get1(g).goldCollector++;
                 }
             }
         }

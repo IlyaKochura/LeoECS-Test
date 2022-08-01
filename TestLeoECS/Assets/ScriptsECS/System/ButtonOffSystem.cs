@@ -1,10 +1,7 @@
 ﻿using Leopotam.Ecs;
-using Leopotam.Ecs.Ui.Systems;
 using ScriptsECS.Components;
 using ScriptsECS.Events;
-using UnityEngine;
 using UnityEngine.UI;
-using Voody.UniLeo;
 
 namespace ScriptsECS.System
 {

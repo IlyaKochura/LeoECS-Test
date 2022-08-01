@@ -51,9 +51,11 @@ namespace ScriptsECS.StartUp
         private void AddOneFrames()
         {
             _systems.OneFrame<ClickEvent>().
-                OneFrame<EmptyEvent>().
-                OneFrame<GoldEvent>().
-                OneFrame<ClearEvent>();
+                     OneFrame<EmptyEvent>().
+                     OneFrame<ClearEvent>().
+                     OneFrame<DigEvent>().
+                     OneFrame<GoldEvent>();
+                        
         }
 
         private void OnDestroy()

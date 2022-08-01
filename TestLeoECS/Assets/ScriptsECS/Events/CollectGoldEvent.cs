@@ -1,6 +1,6 @@
 ﻿namespace ScriptsECS.Events
 {
-    public struct GoldEvent
+    public struct CollectGoldEvent
     {
         
     }
