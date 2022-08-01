@@ -15,6 +15,7 @@ namespace ScriptsECS.System
                 if (_filterManager.Get1(i).shovelCounter <= 0)
                 {
                     _filterManager.Get1(i).game = false;
+                    _filterManager.GetEntity(i).Get<WinEvent>();
                 }
                 else if (_filterManager.Get1(i).goldCollector == _filterManager.Get1(i).goldToWin)
                 {
@@ -23,6 +24,5 @@ namespace ScriptsECS.System
                 }
             }
         }
-        
     }
 }

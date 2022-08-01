@@ -21,7 +21,7 @@ namespace ScriptsECS.System
 
                 foreach (var i in _filterManagerWin)
                 {
-                    _filterView.Get1(i).winTitle.SetActive(true);
+                    _filterView.Get1(g).winTitle.SetActive(true);
                 }
             }
         }
