@@ -6,7 +6,7 @@ namespace ScriptsECS.System
 {
     sealed class ClearCellsSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<ButtonComponent, ClickEvent>.Exclude<GoldEvent> _filterButton = null;
+        private readonly EcsFilter<ButtonComponent, ClearEvent> _filterButton = null;
         public void Run()
         {
             foreach (var i in _filterButton)
