@@ -14,7 +14,7 @@ namespace ScriptsECS.System
             foreach (var i in _filterButton)
             {
                 _filterButton.Get1(i).cellDepth--;
-                Debug.Log(_filterButton.Get1(i).cellDepth);
+                
             }
         }
     }

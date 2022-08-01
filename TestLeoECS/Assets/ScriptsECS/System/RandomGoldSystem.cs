@@ -1,97 +1,32 @@
-﻿using UnityEngine;
+﻿using System;
+using Leopotam.Ecs;
+using UnityEngine;
+using ScriptsECS.Components;
+using ScriptsECS.Events;
+using Random = System.Random;
 
 namespace ScriptsECS.System
 {
-    sealed class RandomGoldSystem
+    sealed class RandomGoldSystem : IEcsRunSystem
     {
-        // if (_goldCollector >= _filterButton.Get1(0).goldToWin)
-            // {
-            //     _game = false;
-            //     _filterView.Get1(0).winTitle.SetActive(true);
-            // }
-            // ViewCounters();
+        private readonly EcsFilter<ButtonComponent, ClickEvent> _filterClick = null;
+        private readonly EcsFilter<GameManagerComponent> _filterManager = null;
         
-
-        // private void Digger(int id)
-        // {
-        //     if (_game)
-        //     {
-        //         if(_shovelCounter <= 0) return;
-        //
-        //         if (!_filterSearch.Get1(0).buttonsUI[id].itIsGold)
-        //         {
-        //             Dig(id);
-        //         }
-        //         else
-        //         {
-        //             CleanCells(id);
-        //         }
-        //
-        //         
-        //         if (_filter.Get1(0).cellsDigCount[id] == 0)
-        //         {
-        //             _filterButton.Get1(0).buttons[id].GetComponent<Button>().interactable = false;
-        //         }
-        //
-        //         if (_shovelCounter <= 0)
-        //         {
-        //             CleanField();
-        //         }
-        //     }
-        // }
-        //
-        // private void RandomGold(int id)
-        // {
-        //     var rnd = Random.Range(0, 6);
-        //
-        //     if (rnd >= 2)
-        //     {
-        //         _filterSearch.Get1(0).buttonsUI[id].itIsGold = true;
-        //         _filterSearch.Get1(0).buttonsUI[id].SetText("Голда");
-        //     }
-        // }
-        //
-        // private void CleanCells(int id)
-        // {
-        //     if(_filterSearch.Get1(0).buttonsUI[id].itIsGold)
-        //     {
-        //         _filterSearch.Get1(0).buttonsUI[id].itIsGold = false;
-        //         _filterSearch.Get1(0).buttonsUI[id].SetText("");
-        //         _goldCollector++;
-        //     }
-        // }
-        //
-        // private void ViewCounters()
-        // {
-        //     _filterView.Get1(0).textGold.text = $"Gold {_goldCollector}";
-        //     _filterView.Get1(0).textShovel.text = $"Shovel {_shovelCounter}";
-        // }
-        //
-        // private void Dig(int id)
-        // {
-        //     if (!_filterSearch.Get1(0).buttonsUI[id].itIsGold && _shovelCounter > 0) 
-        //     {
-        //         _filter.Get1(0).cellsDigCount[id] -= 1;
-        //         _shovelCounter--;
-        //         if (_filter.Get1(0).cellsDigCount[id] != 0 && !_filterSearch.Get1(0).buttonsUI[id].itIsGold)
-        //         {
-        //             RandomGold(id);
-        //         }
-        //     }
-        // }
-        //
-        // private void CleanField()
-        // {
-        //     for (int i = 0; i < _filterSearch.Get1(0).buttonsUI.Count ; i++)
-        //     {
-        //         _filterSearch.Get1(0).buttonsUI[i].itIsGold = false;
-        //         _filterSearch.Get1(0).buttonsUI[i].SetText("");
-        //     }
-        // }
-        //
-        // private void RestartGame()
-        // {
-        //     SceneManager.LoadScene(0);
-        // }
+        public void Run()
+        {
+            Random rnd = new Random();
+            foreach (var j in _filterManager)
+            {
+                foreach (var i in _filterClick)
+                {
+                    var gold = rnd.Next(0, 10);
+                    if (gold > _filterManager.Get1(j).chanceGold)
+                    {
+                        _filterClick.Get1(i).itIsGold = true;
+                        _filterClick.GetEntity(i).Get<GoldEvent>();
+                    }
+                }
+            }
+        }
     }
 }

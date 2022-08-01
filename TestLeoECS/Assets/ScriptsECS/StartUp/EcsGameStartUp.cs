@@ -1,5 +1,6 @@
 using UnityEngine;
 using Leopotam.Ecs;
+using ScriptsECS.Components;
 using ScriptsECS.Events;
 using ScriptsECS.System;
 using Voody.UniLeo;
@@ -42,12 +43,17 @@ namespace ScriptsECS.StartUp
                      Add(new CounterSystem()).
                      Add(new ShowViewSystem()).
                      Add(new EmptyCellsSystem()).
-                     Add(new ButtonOffSystem());
+                     Add(new ButtonOffSystem()).
+                     Add(new RandomGoldSystem()).
+                     Add(new SetGoldSystem());
         }
 
         private void AddOneFrames()
         {
-            _systems.OneFrame<ClickEvent>();
+            _systems.OneFrame<ClickEvent>().
+                OneFrame<EmptyEvent>().
+                OneFrame<GoldEvent>().
+                OneFrame<ClearEvent>();
         }
 
         private void OnDestroy()

@@ -1086,6 +1086,7 @@ MonoBehaviour:
     shovelCounter: 20
     game: 1
     cellDepth: 10
+    chanceGold: 6
 --- !u!114 &1755298128
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,5 +11,7 @@ namespace ScriptsECS.Components
         public int shovelCounter;
         public bool game;
         public int cellDepth;
+        [Range(1,10)]
+        public int chanceGold;
     }
 }
