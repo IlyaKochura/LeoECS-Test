@@ -1,7 +1,4 @@
 ﻿namespace ScriptsECS.Events
 {
-    public struct ClickEvent
-    {
-        
-    }
+    public struct ClickEvent{}
 }

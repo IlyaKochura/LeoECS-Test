@@ -1,6 +1,5 @@
 using UnityEngine;
 using Leopotam.Ecs;
-using ScriptsECS.Components;
 using ScriptsECS.Events;
 using ScriptsECS.System;
 using Voody.UniLeo;

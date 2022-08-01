@@ -1,7 +1,4 @@
 ﻿namespace ScriptsECS.Events
 {
-    public struct WinEvent
-    {
-        
-    }
+    public struct WinEvent{}
 }

@@ -1,7 +1,4 @@
 ﻿namespace ScriptsECS.Events
 {
-    public struct ClearEvent
-    {
-        
-    }
+    public struct ClearEvent{}
 }

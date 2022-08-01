@@ -1,9 +1,8 @@
-﻿using System;
-using Leopotam.Ecs;
-using UnityEngine;
+﻿using Leopotam.Ecs;
 using ScriptsECS.Components;
 using ScriptsECS.Events;
 using Random = System.Random;
+
 
 namespace ScriptsECS.System
 {

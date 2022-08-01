@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Leopotam.Ecs;
 using ScriptsECS.Components;
-using ScriptsECS.Providers;
 using UnityEngine;
 using ScriptsMono;
 

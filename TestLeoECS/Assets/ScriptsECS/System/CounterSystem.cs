@@ -24,7 +24,11 @@ namespace ScriptsECS.System
 
             foreach (var i in _filterGold)
             {
-                _filterManager.Get1(0).goldCollector++;
+                foreach (var g in _filterManager)
+                {
+                    _filterManager.Get1(g).goldCollector++;
+                }
+                
             }
             
         }

@@ -2,8 +2,5 @@
 
 namespace ScriptsECS.Events
 {
-    public struct EmptyEvent
-    {
-        
-    }
+    public struct EmptyEvent{}
 }

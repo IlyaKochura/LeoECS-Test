@@ -1,7 +1,4 @@
 ﻿namespace ScriptsECS.Events
 {
-    public struct DigEvent
-    {
-        
-    }
+    public struct DigEvent{}
 }

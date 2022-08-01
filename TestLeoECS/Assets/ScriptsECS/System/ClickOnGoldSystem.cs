@@ -1,7 +1,6 @@
 ﻿using Leopotam.Ecs;
 using ScriptsECS.Components;
 using ScriptsECS.Events;
-using UnityEngine.PlayerLoop;
 
 namespace ScriptsECS.System
 {
