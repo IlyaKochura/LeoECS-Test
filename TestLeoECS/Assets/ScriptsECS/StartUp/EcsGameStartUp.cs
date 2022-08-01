@@ -45,6 +45,7 @@ namespace ScriptsECS.StartUp
                      Add(new EmptyCellsSystem()).
                      Add(new ButtonOffSystem()).
                      Add(new RandomGoldSystem()).
+                     Add(new ClickOnGoldSystem()).
                      Add(new SetGoldSystem());
         }
 

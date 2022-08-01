@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using Leopotam.Ecs;
 using ScriptsECS.Components;
 using ScriptsECS.Events;
@@ -8,7 +9,7 @@ namespace ScriptsECS.System
     sealed class CounterSystem : IEcsRunSystem
     {
         private readonly EcsFilter<ButtonComponent, DigEvent> _filterButton = null;
-        private readonly EcsFilter<ButtonComponent, ClearEvent, ClickEvent> _filterGold = null;
+        private readonly EcsFilter<ButtonComponent, ClearEvent> _filterGold = null;
         private readonly EcsFilter<GameManagerComponent> _filterManager = null;
         
         public void Run()
@@ -23,12 +24,9 @@ namespace ScriptsECS.System
 
             foreach (var i in _filterGold)
             {
-                foreach (var g in _filterManager)
-                {
-                    _filterGold.GetEntity(g).Del<CollectGoldEvent>();
-                    _filterManager.Get1(g).goldCollector++;
-                }
+                _filterManager.Get1(0).goldCollector++;
             }
+            
         }
     }
 }
