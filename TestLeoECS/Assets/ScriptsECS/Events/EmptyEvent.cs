@@ -1,4 +1,6 @@
-﻿namespace ScriptsECS.Events
+﻿using UnityEngine;
+
+namespace ScriptsECS.Events
 {
     public struct EmptyEvent
     {

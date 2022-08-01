@@ -301,3 +301,4 @@ MonoBehaviour:
     cellDepth: 5
     itIsGold: 0
     text: {fileID: 0}
+    button: {fileID: 3110512619507516595}

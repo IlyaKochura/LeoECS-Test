@@ -12,6 +12,6 @@ namespace ScriptsECS.Components
         [HideInInspector] public bool itIsGold;
         [HideInInspector] public TextMeshProUGUI text;
         public GameObject button;
-        [HideInInspector] public Action<int> id;
+        
     }
 }

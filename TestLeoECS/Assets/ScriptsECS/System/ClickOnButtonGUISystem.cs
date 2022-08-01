@@ -20,7 +20,6 @@ namespace ScriptsECS.System
                 {
                     var id = j;
                     buttonsUI[j].Action = () => SendEvent(id);
-                    buttonsUI[j].Action = () => _filterButton.Get1(i).id(id);
                 }
             }
             
