@@ -18,11 +18,11 @@ namespace ScriptsECS.System
                     _filterView.Get1(g).textShovel.text = $"Shovel {_filterManager.Get1(i).shovelCounter}";
                     _filterView.Get1(g).textGold.text = $"Gold {_filterManager.Get1(i).goldCollector}";
                 }
-
-                foreach (var i in _filterManagerWin)
-                {
-                    _filterView.Get1(g).winTitle.SetActive(true);
-                }
+            }
+            
+            foreach (var i in _filterManagerWin)
+            {
+                _filterView.Get1(0).winTitle.SetActive(true);
             }
         }
     }
