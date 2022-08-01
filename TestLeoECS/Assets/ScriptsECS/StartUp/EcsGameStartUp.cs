@@ -47,7 +47,8 @@ namespace ScriptsECS.StartUp
                      Add(new RandomGoldSystem()).
                      Add(new ClickOnGoldSystem()).
                      Add(new ClearCellsSystem()).
-                     Add(new SetGoldSystem());
+                     Add(new SetGoldSystem()).
+                     Add(new WinOrFailCheckSystem());
         }
 
         private void AddOneFrames()
@@ -56,7 +57,8 @@ namespace ScriptsECS.StartUp
                      OneFrame<EmptyEvent>().
                      OneFrame<ClearEvent>().
                      OneFrame<DigEvent>().
-                     OneFrame<GoldEvent>();
+                     OneFrame<GoldEvent>().
+                     OneFrame<WinEvent>();
                         
         }
 

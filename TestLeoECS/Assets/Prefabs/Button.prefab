@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value:
-    cellDepth: 5
+    cellDepth: 3
     itIsGold: 0
     text: {fileID: 2361718966600449839}
     button: {fileID: 3110512619507516595}

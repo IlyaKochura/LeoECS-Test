@@ -7,19 +7,26 @@ namespace ScriptsECS.System
     sealed class DigSystem : IEcsRunSystem
     {
         private readonly EcsFilter<ButtonComponent, ClickEvent> _filterButton = null;
+        private readonly EcsFilter<GameManagerComponent> _filterManager = null;
 
         public void Run()
         {
-            foreach (var i in _filterButton)
+            foreach (var g in _filterManager)
             {
-                if (_filterButton.Get1(i).itIsGold == false)
+                if (_filterManager.Get1(g).game)
                 {
-                    _filterButton.Get1(i).cellDepth--;
-                    _filterButton.GetEntity(i).Get<DigEvent>();
-                }
-                else
-                {
-                    _filterButton.GetEntity(i).Get<ClearEvent>();
+                    foreach (var i in _filterButton)
+                    {
+                        if (_filterButton.Get1(i).itIsGold == false)
+                        {
+                            _filterButton.Get1(i).cellDepth--;
+                            _filterButton.GetEntity(i).Get<DigEvent>();
+                        }
+                        else
+                        {
+                            _filterButton.GetEntity(i).Get<ClearEvent>();
+                        }
+                    }
                 }
             }
         }
