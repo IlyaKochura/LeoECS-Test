@@ -9,7 +9,7 @@ namespace ScriptsECS.System
 {
     sealed class RandomGoldSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<ButtonComponent, ClickEvent> _filterClick = null;
+        private readonly EcsFilter<ButtonComponent, DigEvent> _filterClick = null;
         private readonly EcsFilter<GameManagerComponent> _filterManager = null;
         
         public void Run()
