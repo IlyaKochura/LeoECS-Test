@@ -15,9 +15,14 @@ namespace ScriptsECS.System
                 {
                     _filterView.Get1(g).textShovel.text = $"Shovel {_filterManager.Get1(i).shovelCounter}";
                     _filterView.Get1(g).textGold.text = $"Gold {_filterManager.Get1(i).goldCollector}";
-                    if (!_filterManager.Get1(i).game)
+                    if (_filterManager.Get1(i).goldCollector == _filterManager.Get1(i).goldToWin)
                     {
                         _filterView.Get1(g).winTitle.text = "Win!";
+                    }
+
+                    if (_filterManager.Get1(i).shovelCounter <= 0)
+                    {
+                        _filterView.Get1(g).winTitle.text = "Game over";
                     }
                 }
             }
