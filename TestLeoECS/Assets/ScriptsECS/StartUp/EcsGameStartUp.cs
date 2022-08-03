@@ -47,6 +47,7 @@ namespace ScriptsECS.StartUp
                      Add(new ClickOnGoldSystem()).
                      Add(new ClearCellsSystem()).
                      Add(new SetGoldSystem()).
+                     Add(new DroppedSystem()).
                      Add(new WinOrFailCheckSystem());
         }
 
@@ -57,7 +58,8 @@ namespace ScriptsECS.StartUp
                      OneFrame<ClearEvent>().
                      OneFrame<DigEvent>().
                      OneFrame<GoldEvent>().
-                     OneFrame<WinEvent>();
+                     OneFrame<WinEvent>().
+                     OneFrame<DroppedEvent>();
                         
         }
 

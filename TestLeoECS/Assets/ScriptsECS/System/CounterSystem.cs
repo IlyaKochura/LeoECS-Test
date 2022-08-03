@@ -11,6 +11,8 @@ namespace ScriptsECS.System
         private readonly EcsFilter<ButtonComponent, DigEvent> _filterButton = null;
         private readonly EcsFilter<ButtonComponent, ClearEvent> _filterGold = null;
         private readonly EcsFilter<GameManagerComponent> _filterManager = null;
+        private readonly EcsFilter<StashComponent, DroppedEvent> _filterStash = null;
+        
         
         public void Run()
         {
@@ -21,8 +23,8 @@ namespace ScriptsECS.System
                     _filterManager.Get1(g).shovelCounter--;
                 }
             }
-
-            foreach (var i in _filterGold)
+            
+            foreach (var i in _filterStash)
             {
                 foreach (var g in _filterManager)
                 {
@@ -30,7 +32,7 @@ namespace ScriptsECS.System
                 }
                 
             }
-            
         }
     }
+    
 }
