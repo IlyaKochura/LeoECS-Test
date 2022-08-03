@@ -44,8 +44,6 @@ namespace ScriptsECS.StartUp
                      Add(new EmptyCellsSystem()).
                      Add(new ButtonOffSystem()).
                      Add(new RandomGoldSystem()).
-                     Add(new ClickOnGoldSystem()).
-                     Add(new ClearCellsSystem()).
                      Add(new SetGoldSystem()).
                      Add(new DroppedSystem()).
                      Add(new WinOrFailCheckSystem());
@@ -55,7 +53,6 @@ namespace ScriptsECS.StartUp
         {
             _systems.OneFrame<ClickEvent>().
                      OneFrame<EmptyEvent>().
-                     OneFrame<ClearEvent>().
                      OneFrame<DigEvent>().
                      OneFrame<GoldEvent>().
                      OneFrame<WinEvent>().

@@ -9,7 +9,6 @@ namespace ScriptsECS.System
     sealed class CounterSystem : IEcsRunSystem
     {
         private readonly EcsFilter<ButtonComponent, DigEvent> _filterButton = null;
-        private readonly EcsFilter<ButtonComponent, ClearEvent> _filterGold = null;
         private readonly EcsFilter<GameManagerComponent> _filterManager = null;
         private readonly EcsFilter<StashComponent, DroppedEvent> _filterStash = null;
         

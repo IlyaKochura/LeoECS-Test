@@ -23,7 +23,6 @@ namespace ScriptsECS.System
                     if (gold > _filterManager.Get1(j).chanceGold)
                     {
                         _filterClick.GetEntity(i).Get<GoldEvent>();
-                        _filterClick.Get1(i).itIsGold = true;
                     }
                 }
             }

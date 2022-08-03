@@ -22,10 +22,6 @@ namespace ScriptsECS.System
                             _filterButton.Get1(i).cellDepth--;
                             _filterButton.GetEntity(i).Get<DigEvent>();
                         }
-                        else
-                        {
-                            _filterButton.GetEntity(i).Get<ClearEvent>();
-                        }
                     }
                 }
             }
