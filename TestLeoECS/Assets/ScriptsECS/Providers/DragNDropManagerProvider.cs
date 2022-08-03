@@ -1,6 +1,9 @@
-﻿namespace ScriptsECS.Providers
+﻿using ScriptsECS.Components;
+using Voody.UniLeo;
+
+namespace ScriptsECS.Providers
 {
-    public class DragNDropManagerProvider
+    public class DragNDropManagerProvider : MonoProvider<DragNDropManagerComponent>
     {
         
     }
